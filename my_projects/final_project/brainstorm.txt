@@ -1,0 +1,8 @@
+#!/bin/bash
+
+First idea: Steganography where I can hide a message inside a photo.
+
+Second idea: Create a reddit bot
+
+Third idea: create web scraper or currency converter
+
