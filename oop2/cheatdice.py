@@ -33,3 +33,8 @@ class Cheat_Loaded_Dice(Player): # inheritance of Player
                 self.dice[i] += 1
             i += 1
 
+#allows user to roll one extra die
+class Cheat_Extra_Die(Player):
+    def cheat(self)
+        self.dice.append(random.randint(1,6))
+
