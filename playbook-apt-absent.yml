@@ -1,0 +1,12 @@
+---
+- name: Playbook - Un-install figlet
+  hosts: planetexpress:!farnsworth
+  connection: ssh
+  gather_facts: True
+
+  tasks:
+  - name: use apt to remove figlet
+    apt:
+      name: figlet
+      state: absent
+    become: True
