@@ -9,8 +9,7 @@ url = "https://find-jira-errors.atlassian.net/rest/api/2/search"
 
 #Create an object for authentication using the register email and the token from jira
 
-auth = HTTPBasicAuth("zackery.davis6390@gmail.com",
-        "ATATT3xFfGF0yVrVxTmILGBShf8uF5KNf9ErGCuPHr4D5fumWBLxEPJpRvqDuavX0S035tMDkDe0iRHUP-7pnKLftZCsLALV5ZRiAVrsT1xZv0XzD8UdnqkHY-RGZ6MjXg7Jta1wuB3-mXMBo3QgfzrGRf8r-V86TJUMCmdPu9vrUhADxTLzuVw=61B24AF8")
+auth = HTTPBasicAuth("zackery.davis6390@gmail.com","ATATT3xFfGF0DB7V0dhjowSj-B7OMdoBCM3u1pVIzxdwh9HhcY7TYFHs_yFH0rFWCTduHICsJdrvh8k8TDIEcB1mokE-0MP6497VHQEGmWu9L-kiTWeyP_hSWp5mHiPt4UKPuGDZuXukUa7j2tkhLIX7Z4aD9ro8Dlj9K7CQF3IaPab5EOJgWn0=9C67E2E5")
 
 #Create a header parameter to mention the desired format for our data
 

@@ -1,0 +1,35 @@
+---
+- name: Deploy mission critical app
+  hosts: planetexpress
+  gather_facts: True
+  connection: ssh
+
+  tasks: 
+   - name: Cowsay on Debian system (apt)
+     apt:
+       name: cowsay
+       state: present
+     become: True
+     when: ansible_os_family == "Debian"
+
+   - name: Cowsay on RedHat System (yum)
+     yum:
+       name: cowsay
+       state: present
+     become: True
+     when: ansible_os_family == "RedHat"
+
+
+   - name: Get all home directs across all systems
+     command: ls /home
+     become: True
+     register: homevarz
+
+   - name: Create README.txt
+     lineinfile:
+       create: True
+       path: /home/{{ item }}/README.txt
+       line: "Type cowsay 'Moo, my good sir' for a funny display. Use CTRL + C to quit"
+     loop: "{{ homevarz.stdout_lines }}"
+     become: True
+
